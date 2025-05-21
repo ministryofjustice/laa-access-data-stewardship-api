@@ -13,7 +13,7 @@ runs:
         distribution: 'corretto'
         java-version: '21'
 
-    - name: Run unit tests
+    - name: build
       run: ./gradlew clean build
       shell:
         bash
