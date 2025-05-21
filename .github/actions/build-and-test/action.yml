@@ -1,0 +1,24 @@
+name: Build and run tests
+
+runs:
+  using: 'composite'
+  steps:
+
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Setup Java
+      uses: actions/setup-java@v4
+      with:
+        distribution: 'corretto'
+        java-version: '21'
+
+    - name: Run unit tests
+      run: ./gradlew clean build
+      shell:
+        bash
+
+#    - name: Run integration tests
+#      run: mvn failsafe:integration-test
+#      shell:
+#        bash
