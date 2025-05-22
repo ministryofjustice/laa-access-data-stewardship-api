@@ -1,8 +1,5 @@
 name: Feature build and test
-on:
-  workflow_dispatch:
-  pull_request:
-    types: [opened, reopened, synchronize]
+on: [push]
 
 permissions:
   contents: write
