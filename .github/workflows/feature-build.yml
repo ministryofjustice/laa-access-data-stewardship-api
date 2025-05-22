@@ -1,9 +1,9 @@
 name: Feature build and test
 on: [push]
 
-permissions:
-  contents: write
-  packages: write
+#permissions:
+#  contents: write
+#  packages: write
 
 jobs:
   feature_branch:
