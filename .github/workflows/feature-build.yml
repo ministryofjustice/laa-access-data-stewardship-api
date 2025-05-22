@@ -26,7 +26,8 @@ jobs:
         run: docker compose up -d
 
       - name: Build jar and run tests
-        run: ./gradlew build
-        env:
-          GITHUB_ACTOR: ${{ github.actor}}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        uses: ./.github/actions/build-and-test
+  #      run: ./gradlew build
+  #      env:
+  #        GITHUB_ACTOR: ${{ github.actor}}
+  #        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

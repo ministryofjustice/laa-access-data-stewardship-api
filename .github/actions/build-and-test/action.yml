@@ -1,0 +1,13 @@
+name: Build and run tests
+description: Build and run tests
+
+runs:
+  using: "composite"
+
+  steps:
+    - name: Gradle build
+      id: build_and_test
+      run: ./gradlew build
+      env:
+        GITHUB_ACTOR: ${{ github.actor}}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
