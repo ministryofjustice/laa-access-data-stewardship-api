@@ -19,3 +19,5 @@ runs:
       env:
         GITHUB_ACTOR: ${{ inputs.user}}
         GITHUB_TOKEN: ${{ inputs.token }}
+      shell:
+        bash
