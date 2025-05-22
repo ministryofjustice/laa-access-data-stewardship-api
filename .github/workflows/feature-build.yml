@@ -22,8 +22,7 @@ jobs:
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v4
 
-      - name: bring up postgres
-        run: docker compose up
+      - run: docker compose up -d
 
       - name: Build jar and run tests
         run: ./gradlew build
