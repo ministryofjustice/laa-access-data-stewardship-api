@@ -26,7 +26,6 @@ jobs:
         with:
           user: ${{ github.actor }}
           token: ${{ secrets.GITHUB_TOKEN }}
-  #      run: ./gradlew build
-  #      env:
-  #        GITHUB_ACTOR: ${{ github.actor}}
-  #        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Bring down containers
+        run: docker compose down
