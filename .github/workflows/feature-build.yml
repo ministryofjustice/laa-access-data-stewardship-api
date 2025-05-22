@@ -27,5 +27,10 @@ jobs:
           user: ${{ github.actor }}
           token: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Snyk Scan
+        uses: ./.github/actions/synk-scan
+        with:
+          token: ${{ secrets.SNYK_TOKEN }}
+
       - name: Post Setup Containers
         run: docker compose down
