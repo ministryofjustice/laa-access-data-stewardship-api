@@ -1,10 +1,6 @@
 name: Feature build and test
 on: [push]
 
-#permissions:
-#  contents: write
-#  packages: write
-
 jobs:
   feature_branch:
 
@@ -27,6 +23,9 @@ jobs:
 
       - name: Build jar and run tests
         uses: ./.github/actions/build-and-test
+        with:
+          user: ${{ github.actor }}
+          token: ${{ secrets.GITHUB_TOKEN }}
   #      run: ./gradlew build
   #      env:
   #        GITHUB_ACTOR: ${{ github.actor}}
